@@ -13,13 +13,3 @@ steps:
   displayName: 'Run a one-line script'
 - script: pwd
   displayName: 'Test'
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'AzureDevops_Demo/pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
