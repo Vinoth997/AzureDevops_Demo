@@ -13,8 +13,7 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkDirectory: '$(Agent.BuildDirectory)/openjdk-11'
-    cleanDestinationFolder: true
+    jdkFile: '/path/to/jdk-11.0.13_linux-x64_bin.tar.gz'
 
 - task: Maven@3
   inputs:
