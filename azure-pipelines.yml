@@ -13,7 +13,7 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkDirectory: '/etc/java-11-openjdk'
+    jdkDirectory: '/usr/lib/jvm/openjdk-11'
     cleanDestinationFolder: true
 
 - task: Maven@3
