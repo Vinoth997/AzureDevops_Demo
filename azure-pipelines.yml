@@ -6,10 +6,31 @@
 trigger:
 - master
 
-pool: myUbuntuAgentPool
+pool:
+  name: myUbuntuAgentPool
+  demands:
+  - maven
+  - Agent.Version -gtVersion 2.163.1
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-- script: pwd
-  displayName: 'Test'
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'AzureDevops_Demo/pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.7'
+    mavenAuthenticateFeed: false
+    goals: 'install'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'AzureDevops_Demo/pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.7'
+    mavenAuthenticateFeed: false
+    goals: 'test'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
