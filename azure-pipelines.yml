@@ -8,6 +8,14 @@ pool:
   - Agent.Version -gtVersion 2.163.1
 
 steps:
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '11'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'LocalDirectory'
+    jdkDirectory: '/usr/lib/jvm/java-11-openjdk-amd64'
+    cleanDestinationFolder: true
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
