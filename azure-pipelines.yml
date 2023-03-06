@@ -12,9 +12,11 @@ steps:
   inputs:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'LocalDirectory'
-    jdkDirectory: '/usr/lib/jvm/openjdk-11'
+    jdkSourceOption: 'LocalPath'
+    jdkFile: '/usr/lib/jvm/openjdk-11/src.zip'
+    jdkDestinationDirectory: '/usr/lib/jvm/openjdk-11'
     cleanDestinationFolder: true
+
 
 - task: Maven@3
   inputs:
