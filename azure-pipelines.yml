@@ -13,7 +13,7 @@ steps:
   displayName: 'Set JAVA_HOME'
   inputs:
     targetType: 'inline'
-    script: 'echo "JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64" >> ~/.bashrc'
+    script: 'echo "JAVA_HOME=/usr/lib/jvm/openjdk-11" >> ~/.bashrc'
 
 - task: Maven@3
   inputs:
