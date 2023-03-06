@@ -13,7 +13,7 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkFile: '/path/to/jdk-11.0.13_linux-x64_bin.tar.gz'
+    jdkFile: '/usr/lib/jvm/openjdk-11/src.zip'
 
 - task: Maven@3
   inputs:
