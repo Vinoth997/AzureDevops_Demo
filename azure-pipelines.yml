@@ -16,6 +16,20 @@ steps:
     targetType: 'inline'
     script: 'echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> ~/.bashrc'
 
+- task: Bash@3
+  displayName: 'Set up Maven'
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Set M2_HOME
+      echo "M2_HOME=/usr/share/maven" >> ~/.bashrc
+
+      # Add Maven to PATH
+      echo "export PATH=\$M2_HOME/bin:\$PATH" >> ~/.bashrc
+
+      # Reload Bash profile
+      source ~/.bashrc
+
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
