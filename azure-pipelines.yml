@@ -13,11 +13,6 @@ pool:
   - Agent.Version -gtVersion 2.163.1
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '1.7'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: LocalDirectory
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
