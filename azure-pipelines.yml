@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  name: myUbuntuAgentPool
+  name: my-agent
   demands:
   - maven
   - Agent.Version -gtVersion 2.163.1
