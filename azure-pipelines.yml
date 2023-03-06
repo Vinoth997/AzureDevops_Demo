@@ -8,18 +8,12 @@ pool:
   - Agent.Version -gtVersion 2.163.1
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    jdkVersionOption: '11'
     mavenAuthenticateFeed: false
     goals: 'install'
     publishJUnitResults: true
@@ -30,7 +24,7 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    jdkVersionOption: '11'
     mavenAuthenticateFeed: false
     goals: 'test'
     publishJUnitResults: true
