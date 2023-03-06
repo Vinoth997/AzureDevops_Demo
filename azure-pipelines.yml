@@ -10,6 +10,16 @@ pool: myUbuntuAgentPool
 
 steps:
 - script: echo Hello, world!
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: 'AzureDevops_Demo/pom.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
   displayName: 'Run a one-line script'
 - script: pwd
   displayName: 'Test'
