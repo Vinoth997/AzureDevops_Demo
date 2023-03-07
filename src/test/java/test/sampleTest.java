@@ -1,5 +1,6 @@
 package test;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +17,6 @@ public class sampleTest {
 	
 	WebDriver driver;
 	
-	@SuppressWarnings("deprecation")
 	@Test
 	public void browserLaunch() {
 		ChromeOptions options = new ChromeOptions();
@@ -27,7 +27,7 @@ public class sampleTest {
 		driver.manage().window().maximize();
 		
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
 	@Test(dependsOnMethods = "browserLaunch")
