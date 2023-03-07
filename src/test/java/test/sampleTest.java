@@ -16,6 +16,7 @@ public class sampleTest {
 	
 	WebDriver driver;
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void browserLaunch() {
 		ChromeOptions options = new ChromeOptions();
@@ -37,5 +38,4 @@ public class sampleTest {
 			System.out.println(labelText);
 		}
 	}
-
 }
