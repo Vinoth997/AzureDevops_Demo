@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: TestDemoVm
+pool: myagent
 
 steps:
 - task: Maven@3
