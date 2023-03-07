@@ -6,7 +6,10 @@
 trigger:
 - master
 
-pool: newagent
+pool:
+  name: newagent
+  demands:
+  - Agent.Version -equals 2.217.2
 
 steps:
 - task: Maven@3
