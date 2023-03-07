@@ -6,7 +6,8 @@
 trigger:
 - master
 
-pool: Agent-Ar
+pool:  Agent-Ar
+
 
 steps:
 - task: Maven@3
