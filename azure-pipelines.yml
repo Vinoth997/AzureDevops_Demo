@@ -9,6 +9,18 @@ trigger:
 pool: newagent
 
 steps:
+- script: |
+    # Download the chromedriver binary
+    wget -q https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O latest_release.txt
+    wget -q https://chromedriver.storage.googleapis.com/$(cat latest_release.txt)/chromedriver_linux64.zip -P /tmp
+    unzip /tmp/chromedriver_linux64.zip -d /tmp
+
+    # Add chromedriver to PATH
+    echo "export PATH=\$PATH:/tmp" >> ~/.bashrc
+    source ~/.bashrc
+
+  displayName: 'Install chromedriver'
+
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
@@ -20,3 +32,4 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
