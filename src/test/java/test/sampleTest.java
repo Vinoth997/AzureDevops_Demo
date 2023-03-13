@@ -1,5 +1,7 @@
 package test;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -9,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -18,12 +21,20 @@ public class sampleTest {
 	WebDriver driver;
 	
 	@Test
-	public void browserLaunch() {
+	public void browserLaunch() throws MalformedURLException {
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("headless");
+//		options.addArguments("--port=3964");
+//		WebDriverManager.chromedriver().setup();
+//		driver = new ChromeDriver(options);
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
-		options.addArguments("--port=3964");
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(options);
+
+		// Set the URL of the remote server
+		String remoteUrl = "http://10.1.0.4:4444/wd/hub";
+
+		// Create a RemoteWebDriver instance with the remote URL and options
+		WebDriver driver = new RemoteWebDriver(new URL(remoteUrl), options);
 		driver.manage().window().maximize();
 		
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
