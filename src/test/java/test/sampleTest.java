@@ -21,7 +21,7 @@ public class sampleTest {
 	public void browserLaunch() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
-		
+		options.addArguments("--port=3964");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
