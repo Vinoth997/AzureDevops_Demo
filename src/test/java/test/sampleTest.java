@@ -24,9 +24,12 @@ public class sampleTest {
 	
 	@BeforeTest
 	public void browserLaunch() throws MalformedURLException {
+		
+		int port = 4444;
+		
 		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("debuggerAddress", "localhost:" + port);
 		options.addArguments("headless");
-//		options.addArguments("--port=3964");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
