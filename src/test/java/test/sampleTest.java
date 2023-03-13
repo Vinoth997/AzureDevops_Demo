@@ -33,7 +33,7 @@ public class sampleTest {
 		options.addArguments("headless");
 
 		// Set the URL of the remote server
-		String remoteUrl = "http://104.208.97.136:4444/wd/hub";
+		String remoteUrl = "http://10.1.0.4:4444/wd/hub";
 
 		// Create a RemoteWebDriver instance with the remote URL and options
 		driver = new RemoteWebDriver(new URL(remoteUrl), options);
