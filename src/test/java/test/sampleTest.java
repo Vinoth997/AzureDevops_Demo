@@ -24,19 +24,19 @@ public class sampleTest {
 	
 	@BeforeTest
 	public void browserLaunch() throws MalformedURLException {
-//		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("headless");
-//		options.addArguments("--port=3964");
-//		WebDriverManager.chromedriver().setup();
-//		driver = new ChromeDriver(options);
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
-
-		// Set the URL of the remote server
-		String remoteUrl = "http://10.1.0.4:4444/wd/hub";
-
-		// Create a RemoteWebDriver instance with the remote URL and options
-		driver = new RemoteWebDriver(new URL(remoteUrl), options);
+//		options.addArguments("--port=3964");
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver(options);
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("headless");
+//
+//		// Set the URL of the remote server
+//		String remoteUrl = "http://10.1.0.4:4444/wd/hub";
+//
+//		// Create a RemoteWebDriver instance with the remote URL and options
+//		driver = new RemoteWebDriver(new URL(remoteUrl), options);
 		driver.manage().window().maximize();
 		
 		driver.get("https://nxtgenaiacademy.com/demo-site/");
