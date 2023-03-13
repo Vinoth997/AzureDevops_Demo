@@ -14,7 +14,7 @@ steps:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean install'
+    goals: 'test'
     #mavenOptions: '-Xmx3072m'
     #javaHomeOption: 'JDKVersion'
     #jdkVersionOption: '1.8'
