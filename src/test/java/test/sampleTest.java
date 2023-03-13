@@ -27,11 +27,12 @@ public class sampleTest {
 		
 //		int port = 4444;
 		
-		ChromeOptions options = new ChromeOptions();
+//		ChromeOptions options = new ChromeOptions();
 //		options.setExperimentalOption("debuggerAddress", "localhost:" + port);
-		options.addArguments("headless");
+//		options.addArguments("headless");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(options);
+//		driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		driver.get("http://nxtgenaiacademy.com/demo-site/");
