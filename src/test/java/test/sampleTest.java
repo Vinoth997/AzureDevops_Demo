@@ -31,7 +31,7 @@ public class sampleTest {
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		
-		driver.get("https://nxtgenaiacademy.com/demo-site/");
+		driver.get("http://nxtgenaiacademy.com/demo-site/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	

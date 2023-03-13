@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-13T12:39:54Z" name="Default suite" finished-at="2023-03-13T12:40:01Z" duration-ms="6507">
+  <suite started-at="2023-03-13T13:25:07Z" name="Default suite" finished-at="2023-03-13T13:25:13Z" duration-ms="5735">
     <groups>
     </groups>
-    <test started-at="2023-03-13T12:39:54Z" name="Default test" finished-at="2023-03-13T12:40:01Z" duration-ms="6507">
+    <test started-at="2023-03-13T13:25:07Z" name="Default test" finished-at="2023-03-13T13:25:13Z" duration-ms="5735">
       <class name="test.sampleTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:test.sampleTest@71075444]" started-at="2023-03-13T12:39:54Z" name="browserLaunch" finished-at="2023-03-13T12:40:01Z" duration-ms="6259" status="PASS">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:test.sampleTest@71075444]" started-at="2023-03-13T13:25:07Z" name="browserLaunch" finished-at="2023-03-13T13:25:12Z" duration-ms="5536" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="listAllLabels()[pri:0, instance:test.sampleTest@71075444]" started-at="2023-03-13T12:40:01Z" name="listAllLabels" finished-at="2023-03-13T12:40:01Z" duration-ms="133" status="PASS">
+        <test-method signature="listAllLabels()[pri:0, instance:test.sampleTest@71075444]" started-at="2023-03-13T13:25:13Z" name="listAllLabels" finished-at="2023-03-13T13:25:13Z" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- listAllLabels -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:test.sampleTest@71075444]" started-at="2023-03-13T12:40:01Z" name="browserQuit" finished-at="2023-03-13T12:40:01Z" duration-ms="99" status="PASS">
+        <test-method is-config="true" signature="browserQuit()[pri:0, instance:test.sampleTest@71075444]" started-at="2023-03-13T13:25:13Z" name="browserQuit" finished-at="2023-03-13T13:25:13Z" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
